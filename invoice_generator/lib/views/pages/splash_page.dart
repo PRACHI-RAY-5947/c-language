@@ -30,20 +30,15 @@ class _splashpageState extends State<splash_page> {
         child: Expanded(
           child: Container(
             decoration: BoxDecoration(
-                color: Colors.purple.shade50, shape: BoxShape.circle),
-            child: Center(
-              child: Text(
-                "Welcome",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 40,
-                ),
+              color: Colors.purple.shade50,
+              image: const DecorationImage(
+                image: NetworkImage("lib/assets/invoice.jpg"),
+                fit: BoxFit.cover,
               ),
             ),
           ),
         ),
       ),
-      backgroundColor: Colors.purple.shade200,
     );
   }
 }
