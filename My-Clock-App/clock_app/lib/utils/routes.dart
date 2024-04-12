@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 
 class MyRoutes {
-  static String homePage = '/';
+  static String splasPage = '/';
+  static String homePage = 'homePage';
   static String clockPage = "clock_page";
   static String digitalPage = "digital-watch_page";
   static String stopwatchPage = "stropewatch_page";
+  static String digitalClock = "digitalClock";
+  static String calenderPage = "CalendarScreen";
 }
+
+bool timer = false;
 bool image = false;
 List bgImages = [
   "lib/utils/Images/img1.jpg",

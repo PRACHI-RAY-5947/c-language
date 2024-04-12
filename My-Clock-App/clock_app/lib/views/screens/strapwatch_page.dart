@@ -60,10 +60,16 @@ class _DigitalWatchState extends State<DigitalWatch> {
           onTap: () {
             Navigator.of(context).popAndPushNamed(MyRoutes.homePage);
           },
-          child: const Icon(Icons.arrow_back),
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
         ),
-        title: const Text("Digital Clock"),
-        backgroundColor: Colors.green.shade300,
+        title: const Text(
+          "Digital Clock",
+          style: TextStyle(color: Colors.white),
+        ),
+        backgroundColor: Colors.black,
       ),
       body: Center(
         child: Container(
@@ -79,34 +85,39 @@ class _DigitalWatchState extends State<DigitalWatch> {
                   )
                 : null,
           ),
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              Transform.scale(
-                scale: 8,
-                child: CircularProgressIndicator(
-                  strokeWidth: 1,
-                  color: Colors.green.shade300,
-                  value: d.hour / 12,
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white.withOpacity(0.3),
+            ),
+            child: Stack(
+              alignment: Alignment.center,
+              children: [
+                Transform.scale(
+                  scale: 8,
+                  child: CircularProgressIndicator(
+                    strokeWidth: 1,
+                    color: Colors.black,
+                    value: d.hour / 12,
+                  ),
                 ),
-              ),
-              Transform.scale(
-                scale: 6,
-                child: CircularProgressIndicator(
-                  strokeWidth: 1,
-                  color: Colors.black,
-                  value: d.minute / 60,
+                Transform.scale(
+                  scale: 6,
+                  child: CircularProgressIndicator(
+                    strokeWidth: 1,
+                    color: Colors.black,
+                    value: d.minute / 60,
+                  ),
                 ),
-              ),
-              Transform.scale(
-                scale: 5,
-                child: CircularProgressIndicator(
-                  strokeWidth: 1,
-                  color: Colors.green.shade300,
-                  value: d.second / 60,
+                Transform.scale(
+                  scale: 5,
+                  child: CircularProgressIndicator(
+                    strokeWidth: 1,
+                    color: Colors.black,
+                    value: d.second / 60,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
